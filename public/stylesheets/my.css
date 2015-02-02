@@ -1,0 +1,122 @@
+/*
+* Title: my style sheet over bootstrap framwork
+* Version: 1.0.0
+* Author: Ahmad khalilfar
+* Date: 28/12/2014
+*/
+
+body{
+    
+}
+
+#footer{
+    margin-bottom: 0;
+    background-color: #000;
+    color: #666666;
+}
+
+.down-space1{
+    margin-bottom: 10px;
+}
+
+.down-space{
+    margin-bottom: 20px;
+}
+
+.down-space5{
+    padding-top: 50px;
+}
+
+.cursor-hand{
+    cursor: pointer;
+}
+
+.twitter:hover{
+    background-color: #31b0d5;
+}
+
+.chat-box{
+	max-height: 200px;
+	overflow: auto;
+	padding: 5px;
+}
+
+.typingmsg{
+	height: 30px;	
+}
+
+#error404::selection{ background-color: #E13300; color: white; }
+#error404::moz-selection{ background-color: #E13300; color: white; }
+#error404::webkit-selection{ background-color: #E13300; color: white; }
+
+#error404 {
+	background-color: #fff;
+	margin: 40px;
+	font: 13px/20px normal Helvetica, Arial, sans-serif;
+	color: #4F5155;
+}
+
+#error404 a {
+	color: #003399;
+	background-color: transparent;
+	font-weight: normal;
+}
+
+#error404 h1 {
+	color: #444;
+	background-color: transparent;
+	border-bottom: 1px solid #D0D0D0;
+	font-size: 19px;
+	font-weight: normal;
+	margin: 0 0 14px 0;
+	padding: 14px 15px 10px 15px;
+}
+
+#error404 code {
+	font-family: Consolas, Monaco, Courier New, Courier, monospace;
+	font-size: 12px;
+	background-color: #f9f9f9;
+	border: 1px solid #D0D0D0;
+	color: #002166;
+	display: block;
+	margin: 14px 0 14px 0;
+	padding: 12px 10px 12px 10px;
+}
+
+#error404{
+	margin: 10px;
+	border: 1px solid #D0D0D0;
+	-webkit-box-shadow: 0 0 8px #D0D0D0;
+}
+
+#error404 p {
+	margin: 12px 15px 12px 15px;
+}
+
+.login.page {
+	margin-bottom: 20px;
+}
+
+.chat.page {
+  display: none;
+}
+
+.username {
+  float: left;
+  font-weight: 700;
+  overflow: hidden;
+  padding-right: 15px;
+  text-align: right;
+}
+
+.inputMessage {
+  border: 10px solid #000;
+  top: 0;
+  height: 60px;
+  left: 0;
+  outline: none;
+  padding-left: 10px;
+  1position: absolute;
+  right: 0;
+  width: 100%;
+}

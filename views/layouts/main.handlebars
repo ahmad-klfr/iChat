@@ -1,0 +1,131 @@
+<!doctype html>
+<html>
+	<head>
+		<meta http-equiv="content-type" content="text/html; charset=utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<title>{{{title}}}</title>
+		
+		<!-- Bootstarp 3.1 -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"> 
+        <!-- Bootstrap --> 
+        <link rel="stylesheet" href="/stylesheets/bootstrap.min.css">
+
+        <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries --> 
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]> 
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/ html5shiv.js"></script> 
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/ respond.min.js"></script> 
+        <![endif]-->
+
+        <!-- Font awesome -->
+        <link rel="stylesheet" href="/stylesheets/font-awesome.min.css">
+
+        <!-- My custom style -->
+        <link rel="stylesheet" href="/stylesheets/my.css">			
+	</head>
+    <body>
+        <div id="top"></div>
+        <div class="visible-xs down-space5"></div>
+        <header class="container">
+            <div class="row">
+                <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal" aria-hidden="true"> 
+                                    &times; 
+                                </button> 
+                                <h4 class="modal-title" id="myModalLabel"> 
+                                    User panel
+                                </h4> 
+                            </div>
+                            <div class="modal-body">
+                                <form action="users/login" method="POST">
+                                    <input type="hidden" name="_token" value="csrf_token()">
+                                    <div class="form-group">
+                                        <label for="username">Username</label>
+                                        <input class="form-control" id="username" type="text" name="username" autofocus="autofocus" maxlength="30" >
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="password">Password</label>
+                                        <input class="form-control" id="password" type="password" name="password" maxlength="30" >
+                                    </div>
+                                    <div class="form-group">
+                                        <button class='btn btn-primary active'  type="submit" name="submit" value="Login">
+                                            <span class="glyphicon glyphicon-log-in"></span> Login
+                                        </button>
+                                        <a class="btn btn-info" href="register" >
+                                            <span class="glyphicon glyphicon-plus-sign"></span> Create account
+                                        </a>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <div class="jumbotron">
+            <div class="container">
+                <h1 class="text-center">
+                    iChat!
+                </h1>
+                <p class="text-center">Produced by express framework...</p>                
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-10 col-md-offset-1 text-center">
+                    <nav id="navigation" class="navbar navbar-default navbar-fixed-top navbar-inverse" role="navigation">
+                        <div class="navbar-header"> 
+                            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#example-navbar-collapse"> 
+                                <span class="sr-only">Toggle navigation</span> 
+                                <span class="icon-bar"></span> 
+                                <span class="icon-bar"></span> 
+                                <span class="icon-bar"></span>
+                            </button>
+                            <img class="navbar-brand img-responsive cursor-hand" data-toggle="modal" data-target="#myModal"
+                                 alt="user image" src="images/login.jpg"/>
+                        </div>
+                        <div class="collapse navbar-collapse" id="example-navbar-collapse">
+                            <ul class="nav navbar-nav nav-pills">
+                                <li><a href = "/"><i class="fa fa-home"></i> iChat</a></li>
+								<li><a href = "/about"><i class=""></i> About</a></li>
+                                <li>
+                                    <a href = "users/login"><i class="fa fa-sign-in"></i> Login</a>
+                                </li>
+                                <li><a href = "users/register"><i class="fa fa-plus"></i> Submit</a></li>
+                            </ul>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            {{{body}}}
+        </div>
+        <footer class="container-fluid" id="footer">
+            <div class="down-space1"></div>
+            <div class="text-center">
+                <i class="fa fa-twitter-square fa-2x"></i>
+                <i class="fa fa-facebook-square fa-2x"></i>
+                <i class="fa fa-linkedin-square fa-2x"></i>
+                <i class="fa fa-youtube-square fa-2x"></i>
+            </div>
+            <p class="col-md-8 col-md-offset-2 text-center">
+                <small>Copyright @ 2015 <strong>Ahmad khalilfar</strong></small>
+            </p>
+        </footer>
+		
+		<!-- jQuery (necessary for Bootstrap's JavaScript plugins) --> 
+        <script src="/javascripts/jquery-1.11.1.min.js" ></script>
+
+        <!-- Include all compiled plugins (below), or include individual files as needed --> 
+        <script src="/javascripts/bootstrap.min.js" ></script>
+
+		<script src="/javascripts/socket.io.js"></script>		
+		
+        <!-- my custom script -->
+        <script src="/javascripts/main.js" ></script>
+    </body>
+</html>
